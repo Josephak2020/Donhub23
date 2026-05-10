@@ -4,14 +4,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Build with Buildozer
-        uses: Android-Action/buildozer-action@v1
+        uses: Enki-Engineer/buildozer-action@v1
         with:
           workdir: .
           buildozer_version: master
       - name: Upload APK
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: Donhub-APK
           path: bin/*.apk
